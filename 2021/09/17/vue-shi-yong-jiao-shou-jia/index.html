@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="vue组件笔记, Vanous&#39; Blog">
+    <meta name="keywords" content="vue-使用脚手架, Vanous&#39; Blog">
     <meta name="description" content="要做一个很酷的人哦！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>vue组件笔记 | Vanous&#39; Blog</title>
+    <title>vue-使用脚手架 | Vanous&#39; Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -332,12 +332,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">vue组件笔记</h1>
+                    <h1 class="description center-align post-title">vue-使用脚手架</h1>
                 </div>
             </div>
         </div>
@@ -486,28 +486,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-14
+                    2021-09-17
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-14
+                    2021-09-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    370
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
 
@@ -530,286 +530,46 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Vue组件-笔记"><a href="#Vue组件-笔记" class="headerlink" title="Vue组件-笔记"></a>Vue组件-笔记</h1><h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><table>
-<thead>
-<tr>
-<th>Vue中使用组件的三大步骤：</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>一、定义组件(创建组件)</td>
-</tr>
-<tr>
-<td>二、注册组件</td>
-</tr>
-<tr>
-<td>三、使用组件(写组件标签)</td>
-</tr>
-<tr>
-<td></td>
-</tr>
-<tr>
-<td>一、如何定义一个组件？</td>
-</tr>
-<tr>
-<td>使用Vue.extend(options)创建，其中options和new Vue(options)时传入的那个options几乎一样，但也有点区别；</td>
-</tr>
-<tr>
-<td>区别如下：</td>
-</tr>
-<tr>
-<td>1.el不要写，为什么？ ——— 最终所有的组件都要经过一个vm的管理，由vm中的el决定服务哪个容器。</td>
-</tr>
-<tr>
-<td>2.data必须写成函数，为什么？ ———— 避免组件被复用时，<strong>数据存在引用关系</strong>。</td>
-</tr>
-<tr>
-<td>备注：使用<strong>template</strong>可以配置<strong>组件结构</strong>。</td>
-</tr>
-<tr>
-<td></td>
-</tr>
-<tr>
-<td>二、如何注册组件？</td>
-</tr>
-<tr>
-<td>1.局部注册：靠new Vue的时候传入components选项</td>
-</tr>
-<tr>
-<td>2.全局注册：靠Vue.component(‘组件名’,组件)</td>
-</tr>
-<tr>
-<td></td>
-</tr>
-<tr>
-<td>三、编写组件标签：</td>
-</tr>
-<tr>
-<td><school></school></td>
-</tr>
-</tbody></table>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>X-UA-Compatible<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>IE=edge<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>../js/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>非单文件组件<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>root<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-        <span class="token comment">&lt;!-- 使用多个组件必须用双闭合标签 --&gt;</span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Hello</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Hello</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>School</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>School</span><span class="token punctuation">&gt;</span></span>
-        
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
-    <span class="token comment">// 关闭生产提示</span>
-    Vue<span class="token punctuation">.</span>config<span class="token punctuation">.</span>productionTips <span class="token operator">=</span> <span class="token boolean">false</span>
-    <span class="token comment">// vue原型上追加一个属性 hhh</span>
-    <span class="token class-name">Vue</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>hhh <span class="token operator">=</span> <span class="token number">555</span>
-     <span class="token comment">// 创建一个hello组件 继承</span>
-    <span class="token keyword">const</span> Hello <span class="token operator">=</span> Vue<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-        template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;h2&gt;hello&lt;/h2&gt;</span><span class="token template-punctuation string">`</span></span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token comment">//  1.创建school组件</span>
-    <span class="token keyword">const</span> School <span class="token operator">=</span> Vue<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-        <span class="token comment">// 基本html样式结构用template写 使用模板字符串写 </span>
-        template<span class="token operator">:</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
-            &lt;div&gt;
-            &lt;h2&gt;学校名称：{{schoolName}}&lt;/h2&gt;
-            &lt;h2&gt;学校地址：{{address}}&lt;/h2&gt;
-            &lt;button @click="showName"&gt;点我弹出学校名&lt;/button&gt;
-            &lt;/div&gt;
-            </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
-        <span class="token comment">//  非单文件组件定义时 不写el配置项 数据函数形式写 不能用对象形式 </span>
-        <span class="token comment">//  这里用函数是每次调用函数都是一个新的值  如果是对象的话 一改全改 </span>
-        <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">return</span> <span class="token punctuation">{</span>
-                schoolName<span class="token operator">:</span> <span class="token string">'武汉大学'</span><span class="token punctuation">,</span>
-                address<span class="token operator">:</span> <span class="token string">'珞珈山'</span>
-            <span class="token punctuation">}</span>   
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        methods<span class="token operator">:</span> <span class="token punctuation">{</span>
-            <span class="token function">showName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>schoolName<span class="token punctuation">)</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-   
+                <h1 id="使用Vue脚手架"><a href="#使用Vue脚手架" class="headerlink" title="使用Vue脚手架"></a>使用Vue脚手架</h1><ol>
+<li>Vue脚手架是Vue官方提供的标准化开发工具（开发平台）</li>
+<li>最新的版本为4.x</li>
+</ol>
+<p><strong>设置npm淘宝镜像 避免下载缓慢</strong>  这里是设置为持久使用</p>
+<pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">npm config set registry “’https://registry.npm.taobao.org‘”<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-    <span class="token comment">// 全局注册一个组件 第一个参数为组件名 第二个参数为组件</span>
-    <span class="token comment">// Vue.component('School',school)</span>
-    
-    <span class="token keyword">const</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-        el<span class="token operator">:</span><span class="token string">'#root'</span><span class="token punctuation">,</span>
-        <span class="token comment">// 局部注册组件  一般都是局部注册</span>
-        components<span class="token operator">:</span> <span class="token punctuation">{</span>
-            Hello<span class="token punctuation">,</span>
-            School<span class="token punctuation">,</span>
-            
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<p>配置后可通过下面方式来验证是否成功(PS:<strong>这里可能会设置失败，用下面指令查看会出现undefined，建议重新打开cmd命令行在试试</strong>)</p>
+<pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">npm config get registry<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210914092035848.png" alt="设置npm淘宝镜像"></p>
+<pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">npm config get register
+npm info express<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 
 
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 创建vue实例对象</span>
-<span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    <span class="token comment">// el指定当前vue为哪个容器服务 也就是挂载的对象</span>
-    el<span class="token operator">:</span> <span class="token string">'#root'</span><span class="token punctuation">,</span>
-    <span class="token comment">// data中用于存储数据，数据供el指定的容器去使用，暂时写成一个对象</span>
-    data<span class="token operator">:</span> <span class="token punctuation">{</span>
-        name<span class="token operator">:</span> <span class="token string">'vanous'</span><span class="token punctuation">,</span>
-        address<span class="token operator">:</span> <span class="token string">'武汉'</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token comment">// 2.注册组件 局部注册</span>
-    components<span class="token operator">:</span><span class="token punctuation">{</span>
-        school<span class="token punctuation">,</span>
-        student<span class="token punctuation">,</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-		<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>第一步</strong>（<strong>仅第一次执行</strong>）：全局安装@vue/cli</p>
+<pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd"># 全局安装cli脚手架
+npm install -g @vue/cli
 
+# 版本太低 更新脚手架
+npm update -g @vue/cli<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210914092124623.png" alt="全局安装cli脚手架"></p>
+<p><strong>第二步</strong>：切换到你想要创建项目的目录，使用下面的命令创建项目</p>
+<p><strong>下面是创建一个vue项目时的预设</strong></p>
+<p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210914092159816.png" alt="创建vue项目的预设"></p>
+<pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd"># xxx为项目名称 记得不要跟一些关键字重名
+vue create xxxx   <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 1.创建hello组件</span>
-<span class="token keyword">const</span> hello <span class="token operator">=</span> Vue<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    template<span class="token operator">:</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
-&lt;h2&gt;你好,尊敬的：{{name}}&lt;/h2&gt;
-</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
-    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token punctuation">{</span>
-            name<span class="token operator">:</span><span class="token string">'vanous'</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210914092225994.png" alt="创建vue项目"></p>
+<p><strong>第三步</strong>：启动项目</p>
+<pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">npm run serve<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<span class="token comment">// 注册全局组件hello</span>
-Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">,</span>hello<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-
-
-<table>
-<thead>
-<tr>
-<th>组件的几个注意点：</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1.关于组件名:</td>
-</tr>
-<tr>
-<td>一个单词组成：</td>
-</tr>
-<tr>
-<td>第一种写法(首字母小写)：school</td>
-</tr>
-<tr>
-<td>第二种写法(首字母大写)：School</td>
-</tr>
-<tr>
-<td>多个单词组成：</td>
-</tr>
-<tr>
-<td>第一种写法(kebab-case命名)：my-school</td>
-</tr>
-<tr>
-<td>第二种写法(CamelCase命名)：MySchool (需要Vue脚手架支持)</td>
-</tr>
-<tr>
-<td>备注：</td>
-</tr>
-<tr>
-<td>(1).组件名尽可能回避HTML中已有的元素名称，例如：h2、H2都不行。</td>
-</tr>
-<tr>
-<td>(2).可以使用name配置项指定组件在开发者工具中呈现的名字。</td>
-</tr>
-<tr>
-<td></td>
-</tr>
-<tr>
-<td>2.关于组件标签:</td>
-</tr>
-<tr>
-<td>第一种写法：<school></school></td>
-</tr>
-<tr>
-<td>第二种写法：<school></school></td>
-</tr>
-<tr>
-<td>备注：不用使用脚手架时，<school>会导致后续组件不能渲染。</school></td>
-</tr>
-<tr>
-<td></td>
-</tr>
-<tr>
-<td>3.一个简写方式：</td>
-</tr>
-<tr>
-<td>const school = Vue.extend(options) 可简写为：<strong>const school = options</strong></td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>关于VueComponent：</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1.school组件本质是一个名为<strong>VueComponent的构造函数</strong>，且不是程序员定义的，是Vue.extend生成的。</td>
-</tr>
-<tr>
-<td></td>
-</tr>
-<tr>
-<td>2.我们只需要写<school>或<school></school>，Vue解析时会帮我们创建school组件的实例对象，</school></td>
-</tr>
-<tr>
-<td>即Vue帮我们执行的：new VueComponent(options)。</td>
-</tr>
-<tr>
-<td></td>
-</tr>
-<tr>
-<td>3.特别注意：每次调用Vue.extend，返回的都是一个<strong>全新的VueComponent</strong>！！！！</td>
-</tr>
-<tr>
-<td></td>
-</tr>
-<tr>
-<td>4.关于this指向：</td>
-</tr>
-<tr>
-<td>(1).<strong>组件配置</strong>中：</td>
-</tr>
-<tr>
-<td>data函数、methods中的函数、watch中的函数、computed中的函数 它们的<strong>this</strong>均是【<strong>VueComponent实例对象</strong>】。</td>
-</tr>
-<tr>
-<td>(2).new Vue(options)配置中：</td>
-</tr>
-<tr>
-<td>data函数、methods中的函数、watch中的函数、computed中的函数 它们的this均是【<strong>Vue实例对象</strong>】。</td>
-</tr>
-<tr>
-<td></td>
-</tr>
-<tr>
-<td>5.VueComponent的实例对象，以后简称vc（也可称之为：<strong>组件实例对象</strong>）。</td>
-</tr>
-<tr>
-<td>Vue的实例对象，以后简称vm。</td>
-</tr>
-</tbody></table>
+<p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210914092243512.png" alt="启动"></p>
+<p>最后’<strong>ctrl+c</strong>‘停掉</p>
+<p>![vue相关了解](E:/typora/vue/01 vue基础.assets/image-20210823192022960.png)</p>
+<p><strong>关于不同版本的Vue</strong>：<br>            1.vue.js与vue.runtime.xxx.js的区别：<br>                (1).vue.js是完整版的Vue，包含：<strong>核心功能</strong>+<strong>模板解析器</strong>。<br>                (2).vue.runtime.xxx.js是运行版的Vue，只包含：<strong>核心功能</strong>；没有模板解析器。</p>
+<p>​    2.因为vue.runtime.xxx.js没有模板解析器，所以不能使用template配置项，需要使用<br>​                render函数接收到的createElement函数去指定具体内容。</p>
+<p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210914153630063.png" alt="vue cli运行原理"></p>
 
                 
             </div>
@@ -836,7 +596,7 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/14/vue-zu-jian-bi-ji/">http://example.com/2021/09/14/vue-zu-jian-bi-ji/</a>
+                    <a href="http://example.com/2021/09/17/vue-shi-yong-jiao-shou-jia/">http://example.com/2021/09/17/vue-shi-yong-jiao-shou-jia/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -927,17 +687,18 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/09/17/vue-cha-cao/">
+                <a href="/2021/09/17/vue-shi-yong-jiao-shou-jia/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="vue-插槽">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="vue-使用脚手架">
                         
-                        <span class="card-title">vue-插槽</span>
+                        <span class="card-title">vue-使用脚手架</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -947,9 +708,9 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -962,6 +723,7 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -988,13 +750,13 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/13/vue-ji-chu-bi-ji-san/">
+                <a href="/2021/09/17/vue-zu-jian-tong-xin-ren-yi-zu-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="vue基础笔记(三)">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="vue-组件通信（任意组件）">
                         
-                        <span class="card-title">vue基础笔记(三)</span>
+                        <span class="card-title">vue-组件通信（任意组件）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1005,7 +767,7 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
                             </span>
                         <span class="publish-author">
                             
