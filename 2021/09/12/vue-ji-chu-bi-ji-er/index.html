@@ -530,13 +530,15 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Vue基础-相关笔记（2）"><a href="#Vue基础-相关笔记（2）" class="headerlink" title="Vue基础 相关笔记（2）"></a>Vue基础 相关笔记（2）</h1><h3 id="1-7事件处理"><a href="#1-7事件处理" class="headerlink" title="1.7事件处理"></a>1.7事件处理</h3><table>
+                <h1 id="Vue基础-相关笔记（2）"><a href="#Vue基础-相关笔记（2）" class="headerlink" title="Vue基础 相关笔记（2）"></a>Vue基础 相关笔记（2）</h1><h3 id="1-7事件处理"><a href="#1-7事件处理" class="headerlink" title="1.7事件处理"></a>1.7事件处理</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th><strong>事件的基本使用</strong>：</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>1. 使用v-on:xxx 或 @xxx 绑定事件，其中xxx是事件名；</td>
 </tr>
 <tr>
@@ -551,20 +553,21 @@
 <tr>
 <td>5.@click=”demo” 和 @click=”demo($event)” 效果一致，但后者可以传参；</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>button v<span class="token operator">-</span>on<span class="token operator">:</span>click<span class="token operator">=</span><span class="token string">"showInfo1"</span><span class="token operator">&gt;</span>点我提示信息（不传参）<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span> <span class="token operator">--</span><span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"showInfo1"</span><span class="token operator">&gt;</span>点我提示信息（不传参）<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"showInfo2(66,$event)"</span><span class="token operator">&gt;</span>点我提示信息（传参）<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-
+<div class="table-container">
 <table>
 <thead>
 <tr>
 <th><strong>Vue中的事件修饰符</strong>：</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>1. <strong>prevent</strong>：阻止默认事件（常用）；</td>
 </tr>
 <tr>
@@ -582,7 +585,9 @@
 <tr>
 <td>6. passive：事件的默认行为立即执行，无需等待事件回调执行完毕；</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> prevent 阻止默认事件  这里是阻止跳转事件 <span class="token operator">--</span><span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"http://www.baidu.com"</span> @click<span class="token punctuation">.</span>prevent<span class="token operator">=</span><span class="token string">"showInfo"</span><span class="token operator">&gt;</span>点我提示信息<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
 
@@ -598,16 +603,15 @@
 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"demo1"</span> @click<span class="token operator">=</span><span class="token string">"showInfo"</span><span class="token operator">&gt;</span>
    <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"http://www.baidu.com"</span> @click<span class="token punctuation">.</span>prevent<span class="token punctuation">.</span>stop<span class="token operator">=</span><span class="token string">"showInfo"</span><span class="token operator">&gt;</span>点我提示信息不跳转不冒泡<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
+<div class="table-container">
 <table>
 <thead>
 <tr>
 <th><strong>1. Vue中常用的按键别名</strong>：</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>回车 =&gt; <strong>enter（按键编码为 13 ）</strong></td>
 </tr>
 <tr>
@@ -664,7 +668,9 @@
 <tr>
 <td>5. Vue.config.keyCodes.自定义键名 = 键码，可以去定制按键别名</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> placeholder<span class="token operator">=</span><span class="token string">"按下enter键提示输入"</span> @keyup<span class="token punctuation">.</span>enter<span class="token operator">=</span><span class="token string">"showInfo"</span><span class="token operator">&gt;</span>
 
 <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> tab 键必须配合keydown使用 <span class="token operator">--</span><span class="token operator">&gt;</span>
@@ -672,16 +678,15 @@
             
 <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> ctrl<span class="token operator">+</span>y 类似于热键进行触发 <span class="token operator">--</span><span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> placeholder<span class="token operator">=</span><span class="token string">"按下ctrl+y键提示输入"</span> @keyup<span class="token punctuation">.</span>ctrl<span class="token punctuation">.</span>y<span class="token operator">=</span><span class="token string">"showInfo"</span><span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h3 id="1-8计算属性"><a href="#1-8计算属性" class="headerlink" title="1.8计算属性"></a>1.8计算属性</h3><table>
+<h3 id="1-8计算属性"><a href="#1-8计算属性" class="headerlink" title="1.8计算属性"></a>1.8计算属性</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th></th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>1.定义：要用的属性不存在，要通过已有属性计算得来。</td>
 </tr>
 <tr>
@@ -708,7 +713,9 @@
 <tr>
 <td>2.如果计算属性要被修改，那必须写set函数去响应修改，且set中要引起计算时依赖的数据发生改变。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 计算属性</span>
 computed<span class="token operator">:</span><span class="token punctuation">{</span>
     fullname<span class="token operator">:</span><span class="token punctuation">{</span>
@@ -730,7 +737,6 @@ computed<span class="token operator">:</span><span class="token punctuation">{</
             <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p><strong>计算属性一般不修改，只读不改</strong> 简写如下</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js">computed<span class="token operator">:</span><span class="token punctuation">{</span>
     <span class="token function-variable function">fullname</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -740,14 +746,15 @@ computed<span class="token operator">:</span><span class="token punctuation">{</
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="1-9监视属性"><a href="#1-9监视属性" class="headerlink" title="1.9监视属性"></a>1.9监视属性</h3><table>
+<h3 id="1-9监视属性"><a href="#1-9监视属性" class="headerlink" title="1.9监视属性"></a>1.9监视属性</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>监视属性watch：</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>1.当被监视的属性变化时, 回调函数自动调用, 进行相关操作</td>
 </tr>
 <tr>
@@ -762,7 +769,9 @@ computed<span class="token operator">:</span><span class="token punctuation">{</
 <tr>
 <td>(2).通过vm.$watch监视</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">&gt;</span>
         <span class="token keyword">const</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
             el<span class="token operator">:</span> <span class="token string">'#root'</span><span class="token punctuation">,</span>
@@ -813,16 +822,15 @@ computed<span class="token operator">:</span><span class="token punctuation">{</
                 <span class="token punctuation">}</span>
        <span class="token punctuation">}</span><span class="token punctuation">)</span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
+<div class="table-container">
 <table>
 <thead>
 <tr>
 <th><strong>computed</strong>和<strong>watch</strong>之间的区别：</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>1.computed能完成的功能，watch都可以完成。</td>
 </tr>
 <tr>
@@ -840,14 +848,18 @@ computed<span class="token operator">:</span><span class="token punctuation">{</
 <tr>
 <td>这样this的指向才是vm 或 组件实例对象。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
+<div class="table-container">
 <table>
 <thead>
 <tr>
 <th>深度监视：</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>(1).Vue中的watch默认不监测对象内部值的改变（<strong>一层</strong>）。</td>
 </tr>
 <tr>
@@ -862,7 +874,9 @@ computed<span class="token operator">:</span><span class="token punctuation">{</
 <tr>
 <td>(2).使用watch时根据数据的具体结构，决定是否采用深度监视。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 监视多级结构中的某个属性</span>
 <span class="token string">'numbers.a'</span><span class="token operator">:</span><span class="token punctuation">{</span>
     <span class="token function">handler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -877,20 +891,19 @@ computed<span class="token operator">:</span><span class="token punctuation">{</
             console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'numbers改变了'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h3 id="1-10绑定样式"><a href="#1-10绑定样式" class="headerlink" title="1.10绑定样式"></a>1.10绑定样式</h3><table>
+<h3 id="1-10绑定样式"><a href="#1-10绑定样式" class="headerlink" title="1.10绑定样式"></a>1.10绑定样式</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th></th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>1. class样式</td>
 </tr>
 <tr>
-<td>写法**:class=”xxx”** xxx可以是字符串、对象、数组。</td>
+<td>写法<strong>:class=”xxx”</strong> xxx可以是字符串、对象、数组。</td>
 </tr>
 <tr>
 <td>字符串写法适用于：类名不确定，要动态获取。</td>
@@ -910,7 +923,9 @@ computed<span class="token operator">:</span><span class="token punctuation">{</
 <tr>
 <td>:style=”[a,b]”其中a、b是样式对象（为一个<strong>key</strong>，不能瞎写）。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 绑定<span class="token keyword">class</span>样式 字符串写法  适用于：样式的类名不确定，需要动态指定 <span class="token operator">--</span><span class="token operator">&gt;</span>
       <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"basic"</span> <span class="token operator">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"mood"</span> @click<span class="token operator">=</span><span class="token string">"changeMood"</span><span class="token operator">&gt;</span>
           <span class="token punctuation">{</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span>
@@ -930,16 +945,15 @@ computed<span class="token operator">:</span><span class="token punctuation">{</
       <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"basic"</span> <span class="token operator">:</span>style<span class="token operator">=</span><span class="token string">"styleObj"</span><span class="token operator">&gt;</span>
           <span class="token punctuation">{</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span>
       <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">/</span><span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h3 id="1-11条件渲染"><a href="#1-11条件渲染" class="headerlink" title="1.11条件渲染"></a>1.11条件渲染</h3><table>
+<h3 id="1-11条件渲染"><a href="#1-11条件渲染" class="headerlink" title="1.11条件渲染"></a>1.11条件渲染</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>绑定样式：</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>1. class样式</td>
 </tr>
 <tr>
@@ -963,7 +977,9 @@ computed<span class="token operator">:</span><span class="token punctuation">{</
 <tr>
 <td>:style=”[a,b]”其中a、b是样式对象。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> v<span class="token operator">-</span>show条件渲染 <span class="token operator">--</span><span class="token operator">&gt;</span>
       <span class="token operator">&lt;</span>h1 v<span class="token operator">-</span>show<span class="token operator">=</span><span class="token string">"2===1"</span><span class="token operator">&gt;</span>hello<span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">--</span><span class="token punctuation">{</span><span class="token punctuation">{</span>address<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">/</span><span class="token operator">&gt;</span>
       <span class="token operator">&lt;</span>h1 v<span class="token operator">-</span>show<span class="token operator">=</span><span class="token string">"true"</span><span class="token operator">&gt;</span>hello<span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">--</span><span class="token punctuation">{</span><span class="token punctuation">{</span>address<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">/</span><span class="token operator">&gt;</span>
@@ -984,7 +1000,6 @@ computed<span class="token operator">:</span><span class="token punctuation">{</
           <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span><span class="token number">2222</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
           <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span><span class="token number">3333</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
       <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 
                 
             </div>
@@ -1011,7 +1026,7 @@ computed<span class="token operator">:</span><span class="token punctuation">{</
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/12/vue-ji-chu-bi-ji-er/">http://example.com/2021/09/12/vue-ji-chu-bi-ji-er/</a>
+                    <a href="https://linfzbin.github.io/2021/09/12/vue-ji-chu-bi-ji-er/">https://linfzbin.github.io/2021/09/12/vue-ji-chu-bi-ji-er/</a>
                 </span>
             </div>
             <div class="reprint__notice">

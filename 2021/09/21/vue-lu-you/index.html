@@ -558,19 +558,22 @@
 	<span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 <li><p>实现切换（active-class可配置高亮样式）</p>
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- 借助router-link实现路由的切换 --&gt;
 &lt;router-link replace class="list-group-item" active-class="active"  to="/about"&gt;About&lt;/router-link&gt;
-&lt;router-link replace class="list-group-item" active-class="active"  to="/home"&gt;Home&lt;/router-link&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+&lt;router-link replace class="list-group-item" active-class="active"  to="/home"&gt;Home&lt;/router-link&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
 <li><p>指定展示位置</p>
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- 指定组件的呈现位置 --&gt;
-&lt;router-view&gt;&lt;/router-view&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+&lt;router-view&gt;&lt;/router-view&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
 </ol>
 <h4 id="2-几个注意点"><a href="#2-几个注意点" class="headerlink" title="2.几个注意点"></a>2.几个注意点</h4><ol>
 <li><strong>路由组件</strong>通常存放在<code>pages</code>文件夹，一<strong>般组件</strong>通常存放在<code>components</code>文件夹。</li>
 <li>通过切换，“<strong>隐藏</strong>”了的<strong>路由组件</strong>，默认是被<strong>销毁</strong>掉的，需要的时候再去挂载。</li>
-<li>每个组件都有自己的**<code>$route</code>属性**，里面存储着自己的路由信息。</li>
+<li>每个组件都有自己的<strong><code>$route</code>属性</strong>，里面存储着自己的路由信息。</li>
 <li>整个应用只有一个<strong>router</strong>，可以通过组件的<code>$router</code>属性获取到。</li>
 </ol>
 <h4 id="3-多级路由（多级路由）"><a href="#3-多级路由（多级路由）" class="headerlink" title="3.多级路由（多级路由）"></a>3.多级路由（多级路由）</h4><ol>
@@ -594,10 +597,12 @@
 			<span class="token punctuation">}</span>
 		<span class="token punctuation">]</span>
 	<span class="token punctuation">}</span>
-<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 <li><p>跳转（要写完整路径）：</p>
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- 子组件的路径需要写完整 --&gt;
-&lt;router-link to="/home/news"&gt;News&lt;/router-link&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+&lt;router-link to="/home/news"&gt;News&lt;/router-link&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
 </ol>
 <h4 id="4-路由的query参数"><a href="#4-路由的query参数" class="headerlink" title="4.路由的query参数"></a>4.路由的query参数</h4><ol>
 <li><p>传递参数</p>
@@ -620,11 +625,13 @@
                       id:m.id,
                       title:m.title,
                   }
-                  }"&gt;{{m.title}}&lt;/router-link&gt;&amp;nbsp;&amp;nbsp;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+                  }"&gt;{{m.title}}&lt;/router-link&gt;&amp;nbsp;&amp;nbsp;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 <li><p>接收参数：</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"># query接收参数
 $route<span class="token punctuation">.</span>query<span class="token punctuation">.</span>id
-$route<span class="token punctuation">.</span>query<span class="token punctuation">.</span>title<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+$route<span class="token punctuation">.</span>query<span class="token punctuation">.</span>title<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
 </ol>
 <h4 id="5-命名路由"><a href="#5-命名路由" class="headerlink" title="5.命名路由"></a>5.命名路由</h4><ol>
 <li><p>作用：可以<strong>简化路由的跳转</strong>。</p>
@@ -652,7 +659,8 @@ $route<span class="token punctuation">.</span>query<span class="token punctuatio
                     <span class="token punctuation">]</span>
                 <span class="token punctuation">}</span><span class="token punctuation">,</span>
             <span class="token punctuation">]</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 <li><p>简化跳转：</p>
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!--简化前，需要写完整的路径 --&gt;
 &lt;router-link :to="{
@@ -670,7 +678,8 @@ $route<span class="token punctuation">.</span>query<span class="token punctuatio
                         id:m.id,
                         title:m.title,
                     }
-                }"&gt;{{m.title}}&lt;/router-link&gt;&amp;nbsp;&amp;nbsp;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+                }"&gt;{{m.title}}&lt;/router-link&gt;&amp;nbsp;&amp;nbsp;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 </ol>
 </li>
 </ol>
@@ -695,7 +704,8 @@ $route<span class="token punctuation">.</span>query<span class="token punctuatio
 			<span class="token punctuation">]</span>
 		<span class="token punctuation">}</span>
 	<span class="token punctuation">]</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 <li><p>传递参数</p>
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- 跳转并携带params参数，to的字符串写法 --&gt;
 &lt;router-link :to="/home/message/detail/666/你好"&gt;跳转&lt;/router-link&gt;
@@ -710,14 +720,14 @@ $route<span class="token punctuation">.</span>query<span class="token punctuatio
 		}
 	}"
 &gt;跳转&lt;/router-link&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <blockquote>
 <p><strong>特别注意：</strong>路由携带params参数时，若使用to的对象写法，则<strong>不能使用path配置项</strong>，必须使用name配置！</p>
 </blockquote>
 </li>
 <li><p>接收参数：</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js">$route<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id
-$route<span class="token punctuation">.</span>params<span class="token punctuation">.</span>title<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+$route<span class="token punctuation">.</span>params<span class="token punctuation">.</span>title<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
 </ol>
 <h4 id="7-路由的props配置"><a href="#7-路由的props配置" class="headerlink" title="7.路由的props配置"></a>7.路由的props配置</h4><p>​    作用：让<strong>路由组件更方便的收到参数</strong></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token punctuation">{</span>
@@ -736,14 +746,13 @@ $route<span class="token punctuation">.</span>params<span class="token punctuati
                            <span class="token keyword">return</span> <span class="token punctuation">{</span>id<span class="token operator">:</span>$route<span class="token punctuation">.</span>query<span class="token punctuation">.</span>id<span class="token punctuation">,</span>title<span class="token operator">:</span>$route<span class="token punctuation">.</span>query<span class="token punctuation">.</span>title<span class="token punctuation">}</span>
                       <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h4 id="8-lt-router-link-gt-的replace属性"><a href="#8-lt-router-link-gt-的replace属性" class="headerlink" title="8.<router-link>的replace属性"></a>8.<code>&lt;router-link&gt;</code>的replace属性</h4><ol>
 <li>作用：控制路由跳转时操作浏览器历史记录的模式</li>
 <li>浏览器的历史记录有两种写入方式：分别为<code>push</code>和<code>replace</code>，<code>push</code>是<strong>追加历史记录</strong>，<code>replace</code>是<strong>替换当前记录</strong>。路由跳转时候默认为<code>push</code></li>
 <li>如何开启<code>replace</code>模式：<code>&lt;router-link replace .......&gt;News&lt;/router-link&gt;</code></li>
 </ol>
 <h4 id="9-编程式路由导航"><a href="#9-编程式路由导航" class="headerlink" title="9.编程式路由导航"></a>9.编程式路由导航</h4><ol>
-<li><p>作用：不借助<code>&lt;router-link&gt; </code>实现<strong>路由跳转</strong>，让<strong>路由跳转更加灵活</strong></p>
+<li><p>作用：不借助<code>&lt;router-link&gt;</code>实现<strong>路由跳转</strong>，让<strong>路由跳转更加灵活</strong></p>
 </li>
 <li><p>具体编码：</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">//$router的两个API</span>
@@ -765,7 +774,8 @@ $route<span class="token punctuation">.</span>params<span class="token punctuati
 <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">forward</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//前进</span>
 <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">back</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//后退</span>
 <span class="token comment">// go可以传参 前进或者回退多少步</span>
-<span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">go</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//可前进也可后退</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">go</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//可前进也可后退</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 </ol>
 <h4 id="10-缓存路由组件-keep-alive"><a href="#10-缓存路由组件-keep-alive" class="headerlink" title="10.缓存路由组件[keep-alive]"></a>10.缓存路由组件[keep-alive]</h4><ol>
 <li><p>作用：让不展示的<strong>路由组件</strong>保持挂载，不被销毁。</p>
@@ -781,13 +791,14 @@ $route<span class="token punctuation">.</span>params<span class="token punctuati
     &lt;router-view&gt;&lt;/router-view&gt;
 &lt;/keep-alive&gt;
 
-&lt;!-- 不指定include则是缓存全部 --&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+&lt;!-- 不指定include则是缓存全部 --&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 </ol>
 <h4 id="11-两个新的生命周期钩子activated和deactivated"><a href="#11-两个新的生命周期钩子activated和deactivated" class="headerlink" title="11.两个新的生命周期钩子activated和deactivated"></a>11.两个新的生命周期钩子activated和deactivated</h4><ol>
 <li>作用：<strong>路由组件所独有的两个钩子</strong>，用于捕获路由组件的<strong>激活状态</strong>。</li>
 <li>具体名字：<ol>
 <li><code>activated</code>  路由组件被激活时触发。</li>
-<li><code>deactivated </code>  路由组件失活时触发。</li>
+<li><code>deactivated</code>  路由组件失活时触发。</li>
 </ol>
 </li>
 </ol>
@@ -820,7 +831,8 @@ router<span class="token punctuation">.</span><span class="token function">after
 	<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
 		document<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">'vue_test'</span>
 	<span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 <li><p><strong>独享守卫</strong>:</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 注意这里独享守卫是 beforeEnter</span>
 <span class="token function">beforeEnter</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span>from<span class="token punctuation">,</span>next</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -835,7 +847,8 @@ router<span class="token punctuation">.</span><span class="token function">after
 	<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
 		<span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 	<span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 <li><p><strong>组件内守卫：</strong></p>
 <p><strong>路由规则</strong></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">//进入守卫：通过路由规则，进入该组件时被调用</span>
@@ -861,7 +874,8 @@ router<span class="token punctuation">.</span><span class="token function">after
     <span class="token function">beforeRouteLeave</span> <span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 </ol>
 <h4 id="13-路由器的两种工作模式"><a href="#13-路由器的两种工作模式" class="headerlink" title="13.路由器的两种工作模式"></a>13.路由器的两种工作模式</h4><ol>
 <li><p>对于一个url来说，什么是<strong>hash</strong>值？—— #及其后面的内容就是<strong>hash</strong>值。</p>
@@ -870,7 +884,7 @@ router<span class="token punctuation">.</span><span class="token function">after
 </li>
 <li><p><strong>hash</strong>模式：（默认）</p>
 <ul>
-<li>地址中永远带着**#**号，不美观 。</li>
+<li>地址中永远带着<strong>#</strong>号，不美观 。</li>
 <li>若以后将地址通过第三方手机app分享，若app校验严格，则地址会被标记为不合法。</li>
 <li>兼容性较好。</li>
 </ul>
@@ -878,14 +892,14 @@ router<span class="token punctuation">.</span><span class="token function">after
 <li><p><strong>history</strong>模式：</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"># router 的 index<span class="token punctuation">.</span>js中配置路由器 工作模式（mode） 为 history
 mode<span class="token operator">:</span> <span class="token string">'history'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
 <ul>
 <li><strong>地址干净</strong>，美观 。</li>
 <li><strong>兼容性</strong>和hash模式相比略差。</li>
 <li>应用部署上线时需要后端人员支持，解决刷新页面服务端404的问题。</li>
 </ul>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd"># 解决 history模式下 刷新后 404问题 借助 connect-history-api-fallback
-npm i connect-history-api-fallback<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+npm i connect-history-api-fallback<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
 </ol>
 
                 
@@ -913,7 +927,7 @@ npm i connect-history-api-fallback<span aria-hidden="true" class="line-numbers-r
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/21/vue-lu-you/">http://example.com/2021/09/21/vue-lu-you/</a>
+                    <a href="https://linfzbin.github.io/2021/09/21/vue-lu-you/">https://linfzbin.github.io/2021/09/21/vue-lu-you/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1004,18 +1018,17 @@ npm i connect-history-api-fallback<span aria-hidden="true" class="line-numbers-r
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/21/vue-lu-you/">
+                <a href="/2021/09/21/revisiting-local-descriptor-based-image-to-class-measure-for-few-shot-learning-yue-du-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="vue基础-路由">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Revisiting Local Descriptor based Image-to-Class Measure for Few-shot Learning 阅读笔记">
                         
-                        <span class="card-title">vue基础-路由</span>
+                        <span class="card-title">Revisiting Local Descriptor based Image-to-Class Measure for Few-shot Learning 阅读笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1025,9 +1038,9 @@ npm i connect-history-api-fallback<span aria-hidden="true" class="line-numbers-r
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-21
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-21
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1036,20 +1049,19 @@ npm i connect-history-api-fallback<span aria-hidden="true" class="line-numbers-r
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Vue%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">Vue基础</span>
+                    <a href="/tags/%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">小样本学习</span>
                     </a>
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
+                    <a href="/tags/few-shot-learning/">
+                        <span class="chip bg-color">few shot learning</span>
                     </a>
                     
-                    <a href="/tags/%E5%A4%8D%E4%B9%A0/">
-                        <span class="chip bg-color">复习</span>
+                    <a href="/tags/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">论文笔记</span>
                     </a>
                     
                 </div>

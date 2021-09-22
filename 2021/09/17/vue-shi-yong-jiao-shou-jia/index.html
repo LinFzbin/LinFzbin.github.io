@@ -500,7 +500,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    370
+                    354
                 </div>
                 
 
@@ -536,37 +536,29 @@
 </ol>
 <p><strong>设置npm淘宝镜像 避免下载缓慢</strong>  这里是设置为持久使用</p>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">npm config set registry “’https://registry.npm.taobao.org‘”<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p>配置后可通过下面方式来验证是否成功(PS:<strong>这里可能会设置失败，用下面指令查看会出现undefined，建议重新打开cmd命令行在试试</strong>)</p>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">npm config get registry<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210914092035848.png" alt="设置npm淘宝镜像"></p>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">npm config get register
 npm info express<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-
 <p><strong>第一步</strong>（<strong>仅第一次执行</strong>）：全局安装@vue/cli</p>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd"># 全局安装cli脚手架
 npm install -g @vue/cli
 
 # 版本太低 更新脚手架
 npm update -g @vue/cli<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210914092124623.png" alt="全局安装cli脚手架"></p>
 <p><strong>第二步</strong>：切换到你想要创建项目的目录，使用下面的命令创建项目</p>
 <p><strong>下面是创建一个vue项目时的预设</strong></p>
 <p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210914092159816.png" alt="创建vue项目的预设"></p>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd"># xxx为项目名称 记得不要跟一些关键字重名
 vue create xxxx   <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
 <p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210914092225994.png" alt="创建vue项目"></p>
 <p><strong>第三步</strong>：启动项目</p>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">npm run serve<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210914092243512.png" alt="启动"></p>
 <p>最后’<strong>ctrl+c</strong>‘停掉</p>
-<p>![vue相关了解](E:/typora/vue/01 vue基础.assets/image-20210823192022960.png)</p>
+<p><img src="E:/typora/vue/01 vue基础.assets/image-20210823192022960.png" alt="vue相关了解"></p>
 <p><strong>关于不同版本的Vue</strong>：<br>            1.vue.js与vue.runtime.xxx.js的区别：<br>                (1).vue.js是完整版的Vue，包含：<strong>核心功能</strong>+<strong>模板解析器</strong>。<br>                (2).vue.runtime.xxx.js是运行版的Vue，只包含：<strong>核心功能</strong>；没有模板解析器。</p>
 <p>​    2.因为vue.runtime.xxx.js没有模板解析器，所以不能使用template配置项，需要使用<br>​                render函数接收到的createElement函数去指定具体内容。</p>
 <p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210914153630063.png" alt="vue cli运行原理"></p>
@@ -596,7 +588,7 @@ vue create xxxx   <span aria-hidden="true" class="line-numbers-rows"><span></spa
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/17/vue-shi-yong-jiao-shou-jia/">http://example.com/2021/09/17/vue-shi-yong-jiao-shou-jia/</a>
+                    <a href="https://linfzbin.github.io/2021/09/17/vue-shi-yong-jiao-shou-jia/">https://linfzbin.github.io/2021/09/17/vue-shi-yong-jiao-shou-jia/</a>
                 </span>
             </div>
             <div class="reprint__notice">

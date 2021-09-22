@@ -530,13 +530,15 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Vue组件-笔记"><a href="#Vue组件-笔记" class="headerlink" title="Vue组件-笔记"></a>Vue组件-笔记</h1><h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><table>
+                <h1 id="Vue组件-笔记"><a href="#Vue组件-笔记" class="headerlink" title="Vue组件-笔记"></a>Vue组件-笔记</h1><h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>Vue中使用组件的三大步骤：</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>一、定义组件(创建组件)</td>
 </tr>
 <tr>
@@ -587,7 +589,9 @@
 <tr>
 <td><school></school></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
@@ -656,9 +660,6 @@
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 创建vue实例对象</span>
 <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     <span class="token comment">// el指定当前vue为哪个容器服务 也就是挂载的对象</span>
@@ -675,9 +676,6 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 		<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 1.创建hello组件</span>
 <span class="token keyword">const</span> hello <span class="token operator">=</span> Vue<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     template<span class="token operator">:</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
@@ -692,18 +690,15 @@
 
 <span class="token comment">// 注册全局组件hello</span>
 Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">,</span>hello<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-
-
+<div class="table-container">
 <table>
 <thead>
 <tr>
 <th>组件的几个注意点：</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>1.关于组件名:</td>
 </tr>
 <tr>
@@ -757,14 +752,18 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
 <tr>
 <td>const school = Vue.extend(options) 可简写为：<strong>const school = options</strong></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
+<div class="table-container">
 <table>
 <thead>
 <tr>
 <th>关于VueComponent：</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>1.school组件本质是一个名为<strong>VueComponent的构造函数</strong>，且不是程序员定义的，是Vue.extend生成的。</td>
 </tr>
 <tr>
@@ -809,7 +808,9 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
 <tr>
 <td>Vue的实例对象，以后简称vm。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 
                 
             </div>
@@ -836,7 +837,7 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/14/vue-zu-jian-bi-ji/">http://example.com/2021/09/14/vue-zu-jian-bi-ji/</a>
+                    <a href="https://linfzbin.github.io/2021/09/14/vue-zu-jian-bi-ji/">https://linfzbin.github.io/2021/09/14/vue-zu-jian-bi-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">

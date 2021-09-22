@@ -579,9 +579,6 @@
 &lt;style scoped&gt;
   
 &lt;/style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
 <h3 id="props配置项"><a href="#props配置项" class="headerlink" title="props配置项"></a>props配置项</h3><ol>
 <li><p>功能：让组件接收外部传过来的数据</p>
 </li>
@@ -590,7 +587,7 @@
 </li>
 <li><p>接收数据：</p>
 <ol>
-<li><p>第一种方式（只接收）：<code>props:['name'] </code></p>
+<li><p>第一种方式（只接收）：<code>props:['name']</code></p>
 </li>
 <li><p>第二种方式（限制类型）：<code>props:{name:String}</code></p>
 </li>
@@ -602,7 +599,8 @@ props<span class="token operator">:</span><span class="token punctuation">{</spa
 	required<span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 设置必须传递数据 </span>
 	<span class="token keyword">default</span><span class="token operator">:</span><span class="token string">'老王'</span> <span class="token comment">// 默认值</span>
 	<span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 </ol>
 <blockquote>
 <p>备注：<strong>props是只读的</strong>，Vue底层会监测你对props的修改，如果进行了修改，就会发出警告，若业务需求确实需要修改，那么请复制<strong>props的内容到data中一份，然后去修改data中的数据</strong>。</p>
@@ -617,9 +615,6 @@ props<span class="token operator">:</span><span class="token punctuation">{</spa
 <p>如果给当前组件的 <strong>style</strong> 节点添加了 scoped 属性，则当前组件的样式对其子组件是不生效的。如果想让<strong>某些样式对子组件</strong>生效，可以使用 <strong>/deep/</strong> 深度选择器</p>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd"># 覆盖第三方组件样式
 /deep/ <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-
 <h3 id="vue-config-js配置文件"><a href="#vue-config-js配置文件" class="headerlink" title="vue.config.js配置文件"></a>vue.config.js配置文件</h3><ol>
 <li>使用vue inspect &gt; output.js可以查看到Vue脚手架的默认配置。</li>
 <li>使用vue.config.js可以对脚手架进行个性化定制，详情见：<a target="_blank" rel="noopener" href="https://cli.vuejs.org/zh">https://cli.vuejs.org/zh</a></li>
@@ -752,9 +747,6 @@ props<span class="token operator">:</span><span class="token punctuation">{</spa
     border-radius: 5px;
     }
 &lt;/style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
    
     &lt;div class="todo-header"&gt;
@@ -811,9 +803,6 @@ props<span class="token operator">:</span><span class="token punctuation">{</spa
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
     }
 &lt;/style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
     &lt;div class="todo-footer" v-show="total"&gt;
         &lt;label&gt;      
@@ -904,9 +893,6 @@ props<span class="token operator">:</span><span class="token punctuation">{</spa
     margin-top: 5px;
     }
 &lt;/style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt; 
     &lt;ul class="todo-main"&gt;
         &lt;MyItem 
@@ -945,9 +931,6 @@ props<span class="token operator">:</span><span class="token punctuation">{</spa
     margin-top: 10px;
     }
 &lt;/style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
     &lt;li&gt;
         &lt;label&gt;
@@ -1023,11 +1006,6 @@ props<span class="token operator">:</span><span class="token punctuation">{</spa
         display: block;
     }
 &lt;/style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-
-
 <h3 id="WebStorage"><a href="#WebStorage" class="headerlink" title="WebStorage"></a>WebStorage</h3><ol>
 <li><p>存储内容大小一般支持<strong>5MB</strong>左右（不同浏览器可能还不一样）</p>
 </li>
@@ -1037,15 +1015,14 @@ props<span class="token operator">:</span><span class="token punctuation">{</spa
 <ol>
 <li><p><code>xxxxxStorage.setItem('key', 'value');</code></p>
 <pre><code>该方法接受一个键和值作为参数，会把键值对添加到存储中，如果键名存在，则更新其对应的值。
-</code></pre>
-</li>
+</code></pre></li>
 <li><p><code>xxxxxStorage.getItem('person');</code></p>
 <p>​        该方法接受一个键名作为参数，返回键名对应的值。</p>
 </li>
 <li><p><code>xxxxxStorage.removeItem('key');</code></p>
 <p>​        该方法接受一个键名作为参数，并把该键名从存储中删除。</p>
 </li>
-<li><p><code> xxxxxStorage.clear()</code></p>
+<li><p><code>xxxxxStorage.clear()</code></p>
 <p>​        该方法会清空存储中的所有数据。</p>
 </li>
 </ol>
@@ -1074,7 +1051,8 @@ props<span class="token operator">:</span><span class="token punctuation">{</spa
 <span class="token operator">...</span><span class="token operator">...</span>
 <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
    <span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>xxx<span class="token punctuation">.</span><span class="token function">$on</span><span class="token punctuation">(</span><span class="token string">'atguigu'</span><span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span>test<span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 <li><p>若想让自定义事件只能<strong>触发一次</strong>，可以使用<code>once</code>修饰符，或<code>$once</code>方法。</p>
 </li>
 </ol>
@@ -1143,9 +1121,6 @@ props<span class="token operator">:</span><span class="token punctuation">{</spa
        height: 600px;
    }
 &lt;/style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
   &lt;div class="stu"&gt;
      &lt;h3&gt;学生姓名：{{studentname}}&lt;/h3&gt;
@@ -1195,9 +1170,6 @@ props<span class="token operator">:</span><span class="token punctuation">{</spa
     }
 &lt;/style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-
-
                 
             </div>
             <hr/>
@@ -1223,7 +1195,7 @@ props<span class="token operator">:</span><span class="token punctuation">{</spa
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/17/vue-zu-jian-tong-xin-zi-chuan-fu/">http://example.com/2021/09/17/vue-zu-jian-tong-xin-zi-chuan-fu/</a>
+                    <a href="https://linfzbin.github.io/2021/09/17/vue-zu-jian-tong-xin-zi-chuan-fu/">https://linfzbin.github.io/2021/09/17/vue-zu-jian-tong-xin-zi-chuan-fu/</a>
                 </span>
             </div>
             <div class="reprint__notice">

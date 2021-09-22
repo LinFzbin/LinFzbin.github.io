@@ -587,7 +587,6 @@
     <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h4 id="1-1-2表达式解析"><a href="#1-1-2表达式解析" class="headerlink" title="1.1.2表达式解析"></a>1.1.2表达式解析</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 这里补充下表达式 <span class="token operator">--</span><span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 这里展示的是 name <span class="token operator">--</span><span class="token operator">&gt;</span>
     <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>person<span class="token punctuation">.</span>name<span class="token punctuation">,</span>person<span class="token punctuation">.</span>age<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>   
@@ -595,34 +594,35 @@
     <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span>name<span class="token punctuation">,</span>person<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>   
 <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&amp;&amp;</span> 这里展示的 age <span class="token operator">--</span><span class="token operator">&gt;</span>
     <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span>name <span class="token operator">&amp;&amp;</span> person<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h3 id="1-2vue模板语法"><a href="#1-2vue模板语法" class="headerlink" title="1.2vue模板语法"></a>1.2vue模板语法</h3><table>
+<h3 id="1-2vue模板语法"><a href="#1-2vue模板语法" class="headerlink" title="1.2vue模板语法"></a>1.2vue模板语法</h3><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="left"><strong>1.插值语法：</strong></th>
+<th style="text-align:left"><strong>1.插值语法：</strong></th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">功能：用于解析标签体内容。</td>
+<tbody>
+<tr>
+<td style="text-align:left">功能：用于解析标签体内容。</td>
 </tr>
 <tr>
-<td align="left">写法：，xxx是js表达式，且可以直接读取到data中的所有属性。</td>
+<td style="text-align:left">写法：，xxx是js表达式，且可以直接读取到data中的所有属性。</td>
 </tr>
 <tr>
-<td align="left">==注意：插值表达式只能用在元素的<strong>内容节点</strong>中，不能用在元素的<strong>属性节点</strong>中！==</td>
+<td style="text-align:left">==注意：插值表达式只能用在元素的<strong>内容节点</strong>中，不能用在元素的<strong>属性节点</strong>中！==</td>
 </tr>
 <tr>
-<td align="left"><strong>2.指令语法：</strong></td>
+<td style="text-align:left"><strong>2.指令语法：</strong></td>
 </tr>
 <tr>
-<td align="left">功能：用于解析标签（包括：标签属性、标签体内容、绑定事件…..）。</td>
+<td style="text-align:left">功能：用于解析标签（包括：标签属性、标签体内容、绑定事件…..）。</td>
 </tr>
 <tr>
-<td align="left">举例：v-bind:href=”xxx” 或  简写为 :href=”xxx”，xxx同样要写js表达式，且可以直接读取到data中的所有属性。</td>
+<td style="text-align:left">举例：v-bind:href=”xxx” 或  简写为 :href=”xxx”，xxx同样要写js表达式，且可以直接读取到data中的所有属性。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 插值语法 <span class="token operator">--</span><span class="token operator">&gt;</span>
    <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>hello<span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">{</span>school<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span>姓名为：<span class="token punctuation">{</span><span class="token punctuation">{</span>person<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span>年龄为：<span class="token punctuation">{</span><span class="token punctuation">{</span>person<span class="token punctuation">.</span>age<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
@@ -631,20 +631,19 @@
    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>a v<span class="token operator">-</span>bind<span class="token operator">:</span>href<span class="token operator">=</span><span class="token string">"url"</span><span class="token operator">&gt;</span>跳转链接<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span> <span class="token operator">--</span><span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> v<span class="token operator">-</span>bind简写  <span class="token operator">--</span><span class="token operator">&gt;</span>
    <span class="token operator">&lt;</span>a <span class="token operator">:</span>href<span class="token operator">=</span><span class="token string">"url"</span><span class="token operator">&gt;</span>baidu<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h3 id="1-3-数据绑定"><a href="#1-3-数据绑定" class="headerlink" title="1.3 数据绑定"></a>1.3 数据绑定</h3><table>
+<h3 id="1-3-数据绑定"><a href="#1-3-数据绑定" class="headerlink" title="1.3 数据绑定"></a>1.3 数据绑定</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>Vue中有2种数据绑定的方式：</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>1.**单向绑定(v-bind)**：数据只能从data流向页面。</td>
+<tbody>
+<tr>
+<td>1.<strong>单向绑定(v-bind)</strong>：数据只能从data流向页面。</td>
 </tr>
 <tr>
-<td>2.**双向绑定(v-model)**：数据不仅能从data流向页面，还可以从页面流向data。</td>
+<td>2.<strong>双向绑定(v-model)</strong>：数据不仅能从data流向页面，还可以从页面流向data。</td>
 </tr>
 <tr>
 <td>备注：</td>
@@ -655,47 +654,50 @@
 <tr>
 <td>2. v-model:value 可以简写为 <strong>v-model</strong>，因为v-model默认收集的就是value值。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 这里都适用的简写  <span class="token operator">--</span><span class="token operator">&gt;</span>
       单向数据绑定：<span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> <span class="token operator">:</span>value<span class="token operator">=</span><span class="token string">'msg'</span><span class="token operator">&gt;</span> <span class="token operator">&lt;</span>br<span class="token operator">/</span><span class="token operator">&gt;</span>
       双向数据绑定：<span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">'msg'</span><span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h3 id="1-4-el和data的两种写法"><a href="#1-4-el和data的两种写法" class="headerlink" title="1.4 el和data的两种写法"></a>1.4 el和data的两种写法</h3><table>
+<h3 id="1-4-el和data的两种写法"><a href="#1-4-el和data的两种写法" class="headerlink" title="1.4 el和data的两种写法"></a>1.4 el和data的两种写法</h3><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="left"></th>
+<th style="text-align:left"></th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left"><strong>1. el有2种写法</strong></td>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>1. el有2种写法</strong></td>
 </tr>
 <tr>
-<td align="left">(1).new Vue时候配置el属性。</td>
+<td style="text-align:left">(1).new Vue时候配置el属性。</td>
 </tr>
 <tr>
-<td align="left">(2).先创建Vue实例，随后再通过vm.$mount(‘#root’)指定el的值。</td>
+<td style="text-align:left">(2).先创建Vue实例，随后再通过vm.$mount(‘#root’)指定el的值。</td>
 </tr>
 <tr>
-<td align="left"><strong>2. data有2种写法</strong></td>
+<td style="text-align:left"><strong>2. data有2种写法</strong></td>
 </tr>
 <tr>
-<td align="left">(1).对象式</td>
+<td style="text-align:left">(1).对象式</td>
 </tr>
 <tr>
-<td align="left">(2).函数式</td>
+<td style="text-align:left">(2).函数式</td>
 </tr>
 <tr>
-<td align="left">如何选择：目前哪种写法都可以，以后学习到组件时，data必须使用函数式，否则会报错。</td>
+<td style="text-align:left">如何选择：目前哪种写法都可以，以后学习到组件时，data必须使用函数式，否则会报错。</td>
 </tr>
 <tr>
-<td align="left">3.一个重要的原则：</td>
+<td style="text-align:left">3.一个重要的原则：</td>
 </tr>
 <tr>
-<td align="left"><strong>由Vue管理的函数，一定不要写箭头函数，一旦写了箭头函数，this就不再是Vue实例了。</strong></td>
+<td style="text-align:left"><strong>由Vue管理的函数，一定不要写箭头函数，一旦写了箭头函数，this就不再是Vue实例了。</strong></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// el的两种写法</span>
 <span class="token comment">// const v = new Vue({</span>
 <span class="token comment">//     // el: '#root',  //第一种写法</span>
@@ -722,42 +724,43 @@
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
 <h3 id="1-5-MVVM模型"><a href="#1-5-MVVM模型" class="headerlink" title="1.5 MVVM模型"></a>1.5 MVVM模型</h3><p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210910181834851.png" alt="MVVM模型图"></p>
 <p><strong>View</strong>：                               <strong>页面</strong>结构</p>
 <p><strong>Model</strong>：                             <strong>data</strong>中的<strong>数据</strong></p>
 <p><strong>VM（ViewModel）</strong>：     <strong>Vue</strong>中的<strong>实例对象</strong>    <strong>MVVM</strong>的<strong>核心</strong></p>
 <h3 id="1-6数据代理"><a href="#1-6数据代理" class="headerlink" title="1.6数据代理"></a>1.6数据代理</h3><p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210910183244000.png" alt="数据代理图示"></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left"><strong>1.Vue中的数据代理：</strong></th>
+<th style="text-align:left"><strong>1.Vue中的数据代理：</strong></th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">通过vm对象来代理data对象中属性的操作（读/写）</td>
+<tbody>
+<tr>
+<td style="text-align:left">通过vm对象来代理data对象中属性的操作（读/写）</td>
 </tr>
 <tr>
-<td align="left"><strong>2.Vue中数据代理的好处：</strong></td>
+<td style="text-align:left"><strong>2.Vue中数据代理的好处：</strong></td>
 </tr>
 <tr>
-<td align="left">更加方便的操作data中的数据</td>
+<td style="text-align:left">更加方便的操作data中的数据</td>
 </tr>
 <tr>
-<td align="left"><strong>3.基本原理：</strong></td>
+<td style="text-align:left"><strong>3.基本原理：</strong></td>
 </tr>
 <tr>
-<td align="left">通过Object.defineProperty()把data对象中所有属性添加到vm上。</td>
+<td style="text-align:left">通过Object.defineProperty()把data对象中所有属性添加到vm上。</td>
 </tr>
 <tr>
-<td align="left">为每一个添加到vm上的属性，都指定一个getter/setter。</td>
+<td style="text-align:left">为每一个添加到vm上的属性，都指定一个getter/setter。</td>
 </tr>
 <tr>
-<td align="left">在getter/setter内部去操作（读/写）data中对应的属性。</td>
+<td style="text-align:left">在getter/setter内部去操作（读/写）data中对应的属性。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>数据收集存放在 <strong>vm._data</strong> 里面，能够更高效的监视数据。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">&gt;</span>
 <span class="token comment">// 模拟数据代理</span>
@@ -775,7 +778,6 @@ Object<span class="token punctuation">.</span><span class="token function">defin
 vm<span class="token punctuation">.</span>msg <span class="token operator">=</span> <span class="token string">'hhh'</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>vm<span class="token punctuation">.</span>msg<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 
                 
             </div>
@@ -802,7 +804,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/10/vue-ji-chu-bi-ji-yi/">http://example.com/2021/09/10/vue-ji-chu-bi-ji-yi/</a>
+                    <a href="https://linfzbin.github.io/2021/09/10/vue-ji-chu-bi-ji-yi/">https://linfzbin.github.io/2021/09/10/vue-ji-chu-bi-ji-yi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
