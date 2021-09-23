@@ -536,7 +536,7 @@
 <h4 id="glove-840B-300d-txt-文件下载地址"><a href="#glove-840B-300d-txt-文件下载地址" class="headerlink" title="glove.840B.300d.txt 文件下载地址"></a>glove.840B.300d.txt 文件下载地址</h4><p><a target="_blank" rel="noopener" href="https://www.cxymm.net/article/sinat_26811377/107312579">https://www.cxymm.net/article/sinat_26811377/107312579</a></p>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd"># txt文件服务器上 路径
 F:\datasets\glove\glove.840B.300d\glove.840B.300d.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>便于理解： 以下的具体数据都是在miniimagenet数据上</p>
+<p>便于理解： 以下数据都是指在<strong>miniImagenet</strong>数据集上的数据。</p>
 <h4 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h4><p>首先利用 <strong>Wordnet</strong> 构建一个 <strong>原语知识</strong>，也就是<strong>每个类别都有哪些相关的属性</strong>，就是根据每个类别的 <strong>wnid</strong> 得到此类别所有的相关属性；对于<strong>miniimagenet数据集</strong>来说，<strong>100</strong>个类别的相关属性为<strong>171</strong>；再利用 <strong>Glove</strong> 将<strong>所有属性</strong>转换为<strong>向量表示</strong>，每个属性是一个<strong>300维</strong>的向量。</p>
 <h4 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h4><p>基于上述的<strong>原语知识</strong>以及预训练得到的<strong>特征提取器</strong>，进一步提取一些先验知识。对于<strong>base class </strong>，每个类别有<strong>600</strong>张图片，<strong>平均</strong>这<strong>600</strong>张图片的特征，<strong>均值特征</strong>作为此类别<strong>真正的类原型</strong>；公式如下，这里<script type="math/tex">\mathcal{D}_{base}^k</script>​​​ 表示<strong>base class</strong>中类别 <strong>k</strong> 的所有图片：</p>
 <script type="math/tex; mode=display">
