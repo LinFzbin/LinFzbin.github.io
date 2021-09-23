@@ -484,14 +484,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-22
+                    2021-09-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    923
+                    935
                 </div>
                 
 
@@ -521,9 +521,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Revisiting-Local-Descriptor-based-Image-to-Class-Measure-for-Few-shot-Learning"><a href="#Revisiting-Local-Descriptor-based-Image-to-Class-Measure-for-Few-shot-Learning" class="headerlink" title="Revisiting Local Descriptor based Image-to-Class Measure for Few-shot Learning"></a>Revisiting Local Descriptor based Image-to-Class Measure for Few-shot Learning</h1><h1 id="局部描述子"><a href="#局部描述子" class="headerlink" title="局部描述子"></a>局部描述子</h1><p>文章链接：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1903.12290">https://arxiv.org/abs/1903.12290</a></p>
-<p>代码链接：<a target="_blank" rel="noopener" href="https://github.com/WenbinLee/DN4">https://github.com/WenbinLee/DN4</a></p>
-<p>本文采用基于<strong>度量学习</strong>的方式实现小样本学习任务，与其他度量学习方式不同；本文所用的<strong>embedding</strong>特征提取器<strong>只有卷积层</strong>，<strong>没有全连接层</strong>；也就是没有将一幅图像的特征信息压缩到一个紧凑的<strong>图像级别</strong>的特征表示（特征提取网络将图像特征高度<strong>抽象化</strong>，对<strong>位置不敏感</strong>的向量），因为作者认为图像级别的特征信息会损失很多有<strong>区分性</strong>的特征。</p>
+                <h1 id="Revisiting-Local-Descriptor-based-Image-to-Class-Measure-for-Few-shot-Learning"><a href="#Revisiting-Local-Descriptor-based-Image-to-Class-Measure-for-Few-shot-Learning" class="headerlink" title="Revisiting Local Descriptor based Image-to-Class Measure for Few-shot Learning"></a>Revisiting Local Descriptor based Image-to-Class Measure for Few-shot Learning</h1><h1 id="局部描述子"><a href="#局部描述子" class="headerlink" title="局部描述子"></a>局部描述子</h1><p>本文是发表在CVPR上的一篇小样本学习（<strong>few-shot learning</strong>）方向的文章，<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1903.12290">文章链接</a>、<a target="_blank" rel="noopener" href="https://github.com/WenbinLee/DN4">代码链接</a> 。</p>
+<p>本文采用基于<strong>度量学习</strong>的方式实现小样本学习任务，与其他度量学习方式不同；本文所用的<strong>embedding </strong>特征提取器<strong>只有卷积层</strong>，<strong>没有全连接层</strong>；也就是没有将一幅图像的特征信息压缩到一个紧凑的<strong>图像级别</strong>的特征表示（特征提取网络将图像特征高度<strong>抽象化</strong>，对<strong>位置不敏感</strong>的向量），因为作者认为图像级别的特征信息会损失很多有<strong>区分性</strong>的特征。</p>
 <h3 id="DN4网络"><a href="#DN4网络" class="headerlink" title="DN4网络"></a>DN4网络</h3><p>全称 <strong>Deep Nearest Neighbor Neural Network</strong>，简称为 <strong>DN4</strong></p>
 <p><strong>embedding module $\psi$​​​</strong>：只包含卷积层，没有全连接层（因为要用到图片中的局部信息，所以不将图片的特征向量打平）</p>
 <p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210921195424034.png" alt="local descriptor示例图"></p>
@@ -660,18 +659,17 @@ cos(x_i,\hat{x_i}^j) = \frac{x_i^T \cdot x_i^T}{||x_i||\cdot ||\hat{x_i}||}    \
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/21/revisiting-local-descriptor-based-image-to-class-measure-for-few-shot-learning-yue-du-bi-ji/">
+                <a href="/2021/09/22/deepemd-differentiable-earth-mover-s-distance-for-few-shot-learning-yue-du-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Revisiting Local Descriptor based Image-to-Class Measure for Few-shot Learning 阅读笔记">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="DeepEMD: Differentiable Earth Mover’s Distance for Few-Shot Learning阅读笔记">
                         
-                        <span class="card-title">Revisiting Local Descriptor based Image-to-Class Measure for Few-shot Learning 阅读笔记</span>
+                        <span class="card-title">DeepEMD: Differentiable Earth Mover’s Distance for Few-Shot Learning阅读笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -681,9 +679,9 @@ cos(x_i,\hat{x_i}^j) = \frac{x_i^T \cdot x_i^T}{||x_i||\cdot ||\hat{x_i}||}    \
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-21
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-22
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -692,7 +690,6 @@ cos(x_i,\hat{x_i}^j) = \frac{x_i^T \cdot x_i^T}{||x_i||\cdot ||\hat{x_i}||}    \
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
