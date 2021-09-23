@@ -491,7 +491,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    1.8k
                 </div>
                 
 
@@ -529,13 +529,10 @@
 <h3 id="Pre-Training"><a href="#Pre-Training" class="headerlink" title="Pre-Training"></a>Pre-Training</h3><p>此阶段是基于 <strong>Base Class</strong>，对于<strong>miniimagenet</strong>数据集，<strong>base class</strong>就为 <strong>train为64个 classes</strong>，目的是得到特征提取器  <script type="math/tex">f_{\theta_f}</script>​​</p>
 <h3 id="Learning-to-Complete-Prototypes"><a href="#Learning-to-Complete-Prototypes" class="headerlink" title="Learning to Complete Prototypes"></a>Learning to Complete Prototypes</h3><h4 id="Wordnet相关知识"><a href="#Wordnet相关知识" class="headerlink" title="Wordnet相关知识"></a>Wordnet相关知识</h4><p> <strong>WordNet</strong>是由 <strong>Princeton</strong> 大学的心理学家，语言学家和计算机工程师联合设计的一种基于认知语言学的英语词典。它不是光把单词以字母顺序排列，而且按照单词的意义组成一个“单词的网络”。</p>
 <p> 它是一个覆盖范围宽广的英语词汇语义网。名词，动词，形容词和副词各自被组织成一个同义词的网络，每个同义词集合都代表一个基本的语义概念，并且这些集合之间也由各种关系连接。</p>
-<p> <strong>WordNet</strong> 包含描述概念含义，<strong>一义多词</strong>，<strong>一词多义</strong>，<strong>类别归属</strong>，<strong>近义</strong>，<strong>反义</strong>等问题，访问以下网页，可使用wordnet的基本功能  <a target="_blank" rel="noopener" href="http://wordnetweb.princeton.edu/perl/webwn">http://wordnetweb.princeton.edu/perl/webwn</a></p>
-<p>这里 wordnet 的安装需要自己下载 <a target="_blank" rel="noopener" href="https://github.com/nltk/nltk_data/tree/gh-pages，得到nltk_data-gh-pages.zip文件；解压后找到corpora，发现里面就有wordnet；将其放到任意报错的查找路径中。">https://github.com/nltk/nltk_data/tree/gh-pages，得到nltk_data-gh-pages.zip文件；解压后找到corpora，发现里面就有wordnet；将其放到任意报错的查找路径中。</a></p>
-<p>解决此问题的参考链接为： <a target="_blank" rel="noopener" href="https://www.cxyzjd.com/article/AsanoKiri/107434200">https://www.cxyzjd.com/article/AsanoKiri/107434200</a></p>
+<p> <strong>WordNet</strong> 包含描述概念含义，<strong>一义多词</strong>，<strong>一词多义</strong>，<strong>类别归属</strong>，<strong>近义</strong>，<strong>反义</strong>等问题，访问以下网页，可使用<strong>wordnet</strong>的<a target="_blank" rel="noopener" href="http://wordnetweb.princeton.edu/perl/webwn">基本功能</a> </p>
+<p>这里 <strong>wordnet</strong> 的安装需要自己<a target="_blank" rel="noopener" href="https://github.com/nltk/nltk_data/tree/gh-pages">下载</a> ，得到 <strong>nltk_data-gh-pages.zip</strong> 文件；解压后找到<strong>corpora</strong>，发现里面就有wordnet；将其放到任意报错的查找路径中，解决此问题的<a target="_blank" rel="noopener" href="https://www.cxyzjd.com/article/AsanoKiri/107434200">参考链接</a>。</p>
 <p>在<strong>imagenet</strong>中，<strong>类别</strong>是<strong>词性+8位offset</strong>命名的，这被称为<strong>wnid</strong>，因此每一个类别均对应着一条<strong>Synset</strong>主键。所以知道了<strong>Synset</strong>主键之后，我们也可以得到其<strong>wnid（词性+8位offset）</strong> </p>
-<h4 id="glove-840B-300d-txt-文件下载地址"><a href="#glove-840B-300d-txt-文件下载地址" class="headerlink" title="glove.840B.300d.txt 文件下载地址"></a>glove.840B.300d.txt 文件下载地址</h4><p><a target="_blank" rel="noopener" href="https://www.cxymm.net/article/sinat_26811377/107312579">https://www.cxymm.net/article/sinat_26811377/107312579</a></p>
-<pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd"># txt文件服务器上 路径
-F:\datasets\glove\glove.840B.300d\glove.840B.300d.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><strong>glove.840B.300d.txt</strong> 文件<a target="_blank" rel="noopener" href="https://www.cxymm.net/article/sinat_26811377/107312579">下载地址</a></p>
 <p>便于理解： 以下数据都是指在<strong>miniImagenet</strong>数据集上的数据。</p>
 <h4 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h4><p>首先利用 <strong>Wordnet</strong> 构建一个 <strong>原语知识</strong>，也就是<strong>每个类别都有哪些相关的属性</strong>，就是根据每个类别的 <strong>wnid</strong> 得到此类别所有的相关属性；对于<strong>miniimagenet数据集</strong>来说，<strong>100</strong>个类别的相关属性为<strong>171</strong>；再利用 <strong>Glove</strong> 将<strong>所有属性</strong>转换为<strong>向量表示</strong>，每个属性是一个<strong>300维</strong>的向量。</p>
 <h4 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h4><p>基于上述的<strong>原语知识</strong>以及预训练得到的<strong>特征提取器</strong>，进一步提取一些先验知识。对于<strong>base class </strong>，每个类别有<strong>600</strong>张图片，<strong>平均</strong>这<strong>600</strong>张图片的特征，<strong>均值特征</strong>作为此类别<strong>真正的类原型</strong>；公式如下，这里<script type="math/tex">\mathcal{D}_{base}^k</script>​​​ 表示<strong>base class</strong>中类别 <strong>k</strong> 的所有图片：</p>
