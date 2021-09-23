@@ -743,18 +743,17 @@ s(U,V) = \sum_{i=1}^{HW} \sum_{j=1}^{HW} (1-c_{ij}) \tilde{x}_{ij}</script><p><i
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/22/deepemd-differentiable-earth-mover-s-distance-for-few-shot-learning-yue-du-bi-ji/">
+                <a href="/2021/09/23/prototype-completion-with-primitive-knowledge-for-few-shot-learning-yue-du-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="DeepEMD: Differentiable Earth Mover’s Distance for Few-Shot Learning阅读笔记">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Prototype Completion with Primitive Knowledge for Few-Shot Learning阅读笔记">
                         
-                        <span class="card-title">DeepEMD: Differentiable Earth Mover’s Distance for Few-Shot Learning阅读笔记</span>
+                        <span class="card-title">Prototype Completion with Primitive Knowledge for Few-Shot Learning阅读笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -764,9 +763,9 @@ s(U,V) = \sum_{i=1}^{HW} \sum_{j=1}^{HW} (1-c_{ij}) \tilde{x}_{ij}</script><p><i
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-22
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-23
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -775,7 +774,6 @@ s(U,V) = \sum_{i=1}^{HW} \sum_{j=1}^{HW} (1-c_{ij}) \tilde{x}_{ij}</script><p><i
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1038,13 +1036,13 @@ s(U,V) = \sum_{i=1}^{HW} \sum_{j=1}^{HW} (1-c_{ij}) \tilde{x}_{ij}</script><p><i
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
     
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2021</span>
             
-            <span id="year">2019</span>
+            <span id="year">2021</span>
             
             |&nbsp;Powered by&nbsp;<a href="/about" target="_blank">Vanous</a>
             
@@ -1068,10 +1066,58 @@ s(U,V) = \sum_{i=1}^{HW} \sum_{j=1}^{HW} (1-c_{ij}) \tilde{x}_{ij}</script><p><i
             
             <br>
             
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2021";
+                    var startMonth = "8";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
             <br>
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/LinFzbin" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
 
 
 
