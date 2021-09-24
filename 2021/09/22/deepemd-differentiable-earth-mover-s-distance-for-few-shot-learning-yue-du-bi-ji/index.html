@@ -484,7 +484,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-23
+                    2021-09-24
                 </div>
                 
 
@@ -523,18 +523,8 @@
             <div id="articleContent">
                 <h1 id="DeepEMD-Differentiable-Earth-Mover’s-Distance-for-Few-Shot-Learning"><a href="#DeepEMD-Differentiable-Earth-Mover’s-Distance-for-Few-Shot-Learning" class="headerlink" title="DeepEMD: Differentiable Earth Mover’s Distance for Few-Shot Learning"></a>DeepEMD: Differentiable Earth Mover’s Distance for Few-Shot Learning</h1><h1 id="用于小样本学习的推土机距离"><a href="#用于小样本学习的推土机距离" class="headerlink" title="用于小样本学习的推土机距离"></a>用于小样本学习的<strong>推土机距离</strong></h1><p>本文是发表在CVPR上的一篇小样本学习（<strong>few-shot learning</strong>）方向的文章，<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2003.06777v1">文章链接</a>、<a target="_blank" rel="noopener" href="https://github.com/icoz69/DeepEMD">代码链接</a> 。</p>
 <p>本文提出了一种基于<strong>度量学习</strong>的小样本学习算法（<strong>DeepEMD</strong>），将一张图片拆分成多个图块(一张图片的局部)，然后引入一种新的距离度量方式—<strong>Earth Mover’s Distance</strong>（<strong>EMD</strong> 推土机距离），<strong>EMD</strong>其实就是线性规划中运输问题的最优解；通过线性规划的方式寻找两张图片各个图块间的最佳匹配方式，为不同位置的图块赋予不同的权重，从而表示两张图片间的相似度。</p>
-<h3 id="线性规划中的运输问题"><a href="#线性规划中的运输问题" class="headerlink" title="线性规划中的运输问题"></a>线性规划中的运输问题</h3><p>这里先以一个线性规划的运输问题为例，了解之后 EMD 所需要的已知量，以及之后如何用 emd 去求解两张图片的相似度。</p>
-<p>货源地(<strong>产地</strong>) <strong>O = {$o_i|i=1,…,m$​​​​}</strong>           $o_i$​​​​：货源地(<strong>产地</strong>) <strong>i</strong> 的供货量</p>
-<p>目的地(<strong>销地</strong>) <strong>D = {$d_i|i=1,…,k$​​}</strong>            $d_j$​​：目的地(<strong>销地</strong>) <strong>j</strong> 的需求量</p>
-<p>$c_{i,j}$​​​​：  <strong>i</strong> 和 <strong>j</strong> 两地的<strong>单位运输成本</strong></p>
-<p>$x_{i,j}$​​​​：  <strong>i</strong> 和 <strong>j</strong> 两地的<strong>运输量</strong></p>
-<p><strong>Minimize 目标问题</strong>：寻找总运输成本最低的<strong>运输方案</strong>  $\tilde{X}={\tilde{x}_{i,j}|i=1,…,m;j=1,…,k}$​​</p>
-<script type="math/tex; mode=display">
-\min_{x_{i,j}}=\sum_{i=1}^m\sum_{j=1} ^k c_{i,j} x_{i,j}</script><p><strong>Subject to</strong></p>
-<script type="math/tex; mode=display">
-x_{i,j}\geqslant0 \quad\quad i=1,...,m;j=1,...,k \\
-    \sum_{j=1}^k x_{i,j}=o_i \quad\quad i=1,...,m \\
-    \sum_{j=i}^k x_{i,j}=d_j \quad\quad j=1,...,k</script><p><strong>例子：</strong></p>
+<h3 id="线性规划中的运输问题"><a href="#线性规划中的运输问题" class="headerlink" title="线性规划中的运输问题"></a>线性规划中的运输问题</h3><p>这里先以一个线性规划的运输问题为例，了解之后 <strong>EMD</strong> 所需要的已知量，以及之后如何用 <strong>emd</strong> 去求解两张图片的相似度。</p>
+<p>举个<strong>栗子：</strong></p>
 <div class="table-container">
 <table>
 <thead>
@@ -581,7 +571,17 @@ x_{21}+x_{22}+x_{23} = 300  \\
 x_{11}+x_{21} = 150  \\
 x_{12}+x_{22} = 150  \\
 x_{13}+x_{23} = 200  \\</script><p>综上所述，所需要的<strong>已知量</strong>是 两地之间的<strong>单位运输成本</strong>、产地的<strong>产量</strong>、销地的<strong>销量</strong>。</p>
-<h3 id="EMD-for-Few-shot-Classification"><a href="#EMD-for-Few-shot-Classification" class="headerlink" title="EMD for Few-shot Classification"></a>EMD for Few-shot Classification</h3><p><strong>局部特征表示</strong>可能提供跨类别的可迁移信息，将一张图像分解成<strong>一组局部特征表示</strong>，并通过<strong>cross-reference mechanism（交差参考机制）</strong>为两幅图像中<strong>局部特征表示</strong>分配适当的权值，使用他们之间的最优匹配代价来表示两张图像的差异。</p>
+<p>货源地(<strong>产地</strong>) <strong>O = {$o_i|i=1,…,m$​​​​}</strong>           $o_i$​​​​：货源地(<strong>产地</strong>) <strong>i</strong> 的供货量</p>
+<p>目的地(<strong>销地</strong>) <strong>D = {$d_i|i=1,…,k$​​}</strong>            $d_j$​​：目的地(<strong>销地</strong>) <strong>j</strong> 的需求量</p>
+<p>$c_{i,j}$​​​​：  <strong>i</strong> 和 <strong>j</strong> 两地的<strong>单位运输成本</strong></p>
+<p>$x_{i,j}$​​​​：  <strong>i</strong> 和 <strong>j</strong> 两地的<strong>运输量</strong></p>
+<p><strong>Objective Function</strong>：寻找总运输成本最低的<strong>运输方案</strong>  $\tilde{X}={\tilde{x}_{i,j}|i=1,…,m;j=1,…,k}$​​</p>
+<script type="math/tex; mode=display">
+\min_{x_{i,j}}=\sum_{i=1}^m\sum_{j=1} ^k c_{i,j} x_{i,j}</script><p><strong>Subject to</strong></p>
+<script type="math/tex; mode=display">
+x_{i,j}\geqslant0 \quad\quad i=1,...,m;j=1,...,k \\
+    o_i = \sum_{j=1}^k x_{i,j} \quad\quad i=1,...,m \\
+    d_j = \sum_{i=1}^m x_{i,j} \quad\quad j=1,...,k</script><h3 id="EMD-for-Few-shot-Classification"><a href="#EMD-for-Few-shot-Classification" class="headerlink" title="EMD for Few-shot Classification"></a>EMD for Few-shot Classification</h3><p><strong>局部特征表示</strong>可能提供跨类别的可迁移信息，将一张图像分解成<strong>一组局部特征表示</strong>，并通过<strong>cross-reference mechanism（交差参考机制）</strong>为两幅图像中<strong>局部特征表示</strong>分配适当的权值，使用他们之间的最优匹配代价来表示两张图像的差异。</p>
 <h4 id="三种方法来生成图像的局部特征表示："><a href="#三种方法来生成图像的局部特征表示：" class="headerlink" title="三种方法来生成图像的局部特征表示："></a><strong>三种方法</strong>来生成图像的<strong>局部特征表示</strong>：</h4><p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210922194857585.png" alt="三种方法生成局部描述子"></p>
 <ol>
 <li><p><strong>Fully convolutional Network（DeepEMD-FCN）</strong></p>
