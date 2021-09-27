@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="vue-脚手架配置代理, Vanous&#39; Blog">
+    <meta name="keywords" content="Meta-Transfer Learning for Few-Shot Learning阅读笔记, Vanous&#39; Blog">
     <meta name="description" content="要做一个很酷的人哦！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>vue-脚手架配置代理 | Vanous&#39; Blog</title>
+    <title>Meta-Transfer Learning for Few-Shot Learning阅读笔记 | Vanous&#39; Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -269,12 +269,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">vue-脚手架配置代理</h1>
+                    <h1 class="description center-align post-title">Meta-Transfer Learning for Few-Shot Learning阅读笔记</h1>
                 </div>
             </div>
         </div>
@@ -390,16 +390,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Vue%E5%9F%BA%E7%A1%80/">
-                                <span class="chip bg-color">Vue基础</span>
+                            <a href="/tags/%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">小样本学习</span>
                             </a>
                         
-                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">笔记</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%A4%8D%E4%B9%A0/">
-                                <span class="chip bg-color">复习</span>
+                            <a href="/tags/few-shot-learning/">
+                                <span class="chip bg-color">few shot learning</span>
                             </a>
                         
                     </div>
@@ -410,8 +406,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Vue/" class="post-category">
-                                Vue
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                论文笔记
                             </a>
                         
                     </div>
@@ -423,28 +419,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-17
+                    2021-09-27
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-17
+                    2021-09-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    302
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -467,43 +463,43 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="vue脚手架配置代理"><a href="#vue脚手架配置代理" class="headerlink" title="vue脚手架配置代理"></a>vue脚手架配置代理</h1><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><p>​    在vue.config.js中添加如下配置：</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">devServer<span class="token operator">:</span><span class="token punctuation">{</span>
-  proxy<span class="token operator">:</span><span class="token string">"http://localhost:5000"</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>说明：</p>
-<ol>
-<li>优点：配置简单，请求资源时直接发给前端（<strong>8080</strong>）即可。</li>
-<li>缺点：不能配置多个代理，<strong>不能</strong>灵活的控制请求<strong>是否走代理</strong>。</li>
-<li>工作方式：若按照上述配置代理，当请求了前端不存在的资源时，那么该请求会转发给服务器 （优先匹配前端资源）</li>
-</ol>
-<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><p>​    编写vue.config.js配置具体代理规则：</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
-	devServer<span class="token operator">:</span> <span class="token punctuation">{</span>
-      proxy<span class="token operator">:</span> <span class="token punctuation">{</span>
-      <span class="token string">'/api1'</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token comment">// 匹配所有以 '/api1'开头的请求路径</span>
-        target<span class="token operator">:</span> <span class="token string">'http://localhost:5000'</span><span class="token punctuation">,</span><span class="token comment">// 代理目标的基础路径</span>
-        changeOrigin<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-        pathRewrite<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token string">'^/api1'</span><span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token string">'/api2'</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token comment">// 匹配所有以 '/api2'开头的请求路径</span>
-        target<span class="token operator">:</span> <span class="token string">'http://localhost:5001'</span><span class="token punctuation">,</span><span class="token comment">// 代理目标的基础路径</span>
-        changeOrigin<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-        pathRewrite<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token string">'^/api2'</span><span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">}</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token comment">/*
-   changeOrigin设置为true时，服务器收到的请求头中的host为：localhost:5000
-   changeOrigin设置为false时，服务器收到的请求头中的host为：localhost:8080
-   changeOrigin默认值为true  这个属性就是伪装请求头
-*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>说明：</p>
-<ol>
-<li>优点：可以配置多个代理，且可以灵活的控制请求是否走代理。</li>
-<li>缺点：配置略微繁琐，请求资源时必须加前缀。</li>
-</ol>
+                <h1 id="元迁移学习"><a href="#元迁移学习" class="headerlink" title="元迁移学习"></a>元迁移学习</h1><p>  本文提出了一种新的小样本学习方法，称为 <strong>MTL</strong> ；<strong>元训练</strong>是训练多个任务，<strong>迁移</strong>是通过学习每个任务的神经网络权重的 <strong>scaling</strong> 和 <strong>shifting</strong> 来实现；此外本文还提出了 <strong>hard task (HT) meta-batch</strong> 学习策略；消融实验表明，提出这两点创新都有助于快速收敛以及提高准确率。</p>
+<h3 id="Methodology"><a href="#Methodology" class="headerlink" title="Methodology"></a>Methodology</h3><p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210925093337149.png" alt="MTL流程"></p>
+<p><strong>MTL</strong>由三个阶段组成</p>
+<ul>
+<li>首先在大规模数据集上训练<strong>DNN</strong>（也就是在 <strong>base classes</strong> 上预训练），得到一个好的特征提取器</li>
+<li>在<strong>元迁移</strong>阶段，<strong>MTL</strong> 通过<strong>scaling</strong>和<strong>shifting</strong>的方式调整特征提取器神经元的参数，使其可以快速适应到few-shot的任务中；在此过程中，使用了<strong>HT</strong>训练策略。</li>
+<li><strong>元测试</strong>阶段，将<strong>train</strong>阶段训练的模型放到一个没有见过的任务中，经过少量样本的学习，用无标签的样本上的实验结果作为最终的测试指标。</li>
+</ul>
+<h3 id="DNN-training-on-large-scale-data"><a href="#DNN-training-on-large-scale-data" class="headerlink" title="DNN training on large-scale data"></a>DNN training on large-scale data</h3><p>这个阶段其实就是在 <strong>base classes</strong> 上做预训练，首先初始化一个特征提取器 $\Theta$ 和一个分类器  $\theta$  ；通过下面的梯度下降公式对其进行优化：</p>
+<script type="math/tex; mode=display">
+[\Theta,\theta]  =: [\Theta,\theta] - \alpha  \bigtriangledown \mathcal{L}_{\mathcal{D} } ( [\Theta,\theta] )</script><p> $\alpha$ 为学习率，$\mathcal{L}_{ \mathcal {D} }$ 为损失函数：​</p>
+<script type="math/tex; mode=display">
+\mathcal{L}_{\mathcal{D} } ( [\Theta,\theta] ) = \frac{1} {|D|} \sum_{ (x,y) \in \mathcal{D} } l( f_{ [\Theta,\theta] } (x),y )</script><p>和经典预训练一样，会保留特征提取器，砍掉分类器。</p>
+<h3 id="Meta-transfer-learning-MTL"><a href="#Meta-transfer-learning-MTL" class="headerlink" title="Meta-transfer learning (MTL)"></a>Meta-transfer learning (MTL)</h3><p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210925100741259.png" alt="scaling和shifting"></p>
+<p>上图展示了 <strong>FT</strong>（fine-tuning） 和  <strong>SS</strong>（scaling和shifting）的区别，<strong>SS</strong> 操作不会改变冻结神经元 $\Theta$ 权重参数，而 FT 会更新特征提取器 $\Theta$​​ 的参数。​</p>
+<p> <strong>SS</strong> 具体操作：给定一个 <strong>task</strong>，<strong>task</strong> 训练的损失用来优化<strong>当前</strong> <strong>base-learner</strong>（这里指的是<strong>分类器</strong>） $\theta’$​​ </p>
+<script type="math/tex; mode=display">
+\theta' \leftarrow \theta - \beta \bigtriangledown_{\theta} \mathcal{L}_{ \mathcal{T}^{ (tr) } } ( [\Theta,\theta],\Phi_{S_{ \{1,2 \}  } } )</script><p>这里不更新特征提取器参数 $\Theta$​ ，而且这里的分类器 $\theta$​​​ 和预训练阶段的不同（例如：这里是一个<strong>5way</strong>的分类器）； $\theta’$​​ 只是当前任务的分类器参数，由前一个任务的分类器参数 $\theta$​ 优化而来；</p>
+<p>$\Phi_S$​​​​​​​​ 由 1 初始化； 而$\Phi_{ S_2 }$​​​​​​​​​​​​​​​​​​​ 由 0 初始化；用测试的损失来优化：</p>
+<script type="math/tex; mode=display">
+\Phi_{S_i} =: \Phi_{S_i} - \gamma \bigtriangledown_{\Phi_{S_i} } \mathcal{L}_{\mathcal{T}^{(te)} }( [\Theta;\theta^`],\Phi_{S_{1,2} } )</script><p>$\theta$ 用相同的学习率 $\gamma$ 来进行更新：</p>
+<script type="math/tex; mode=display">
+\theta =: \theta - \gamma \bigtriangledown_{\Phi_{S_i} } \mathcal{L}_{\mathcal{T}^{(te)} }( [\Theta;\theta'
+],\Phi_{S_{1,2} } )</script><p>这里的 $\theta’$​ 来自于训练的最后一轮</p>
+<p>对于已训练的特征提取器 $\Theta$​​​​​​​​ ，对于其包含 <strong>K</strong> 个神经元的第 <strong>l</strong> 层，有 <strong>K</strong> 对参数（分别为权重和偏置），表示为 ${ { W_{i,k},b_{i,k} } }$​​​​  ；基于MTL，学习 <strong>K</strong>  对 <strong>scalars</strong>   ${ \Phi_{S_{ \{ 1,2\} } } }$​​​​​​​ ；假设输入为  <strong>X</strong> ，<strong>SS</strong> 为：</p>
+<script type="math/tex; mode=display">
+SS(X;W,b;\Phi_{S_{ \{1,2 \} } }) = (W \odot \Phi_{ S_1 }) + (b + \Phi_{S_2} )</script><p>$\odot$​​  表示的是 <strong>element-wise multiplication</strong> ，也就是<strong>同位元素相乘</strong></p>
+<p><strong>SS</strong>的优点：</p>
+<ul>
+<li>基于大规模训练的<strong>DNN</strong>参数，可以<strong>快速拟合</strong></li>
+<li>不会改变<strong>DNN</strong>权重，避免<strong>MTL</strong>任务出现时的<strong>catastrophic forgetting</strong>（灾难性遗忘）</li>
+<li>参数少，避免过拟合</li>
+</ul>
+<h3 id="Hard-task-HT-meta-batch"><a href="#Hard-task-HT-meta-batch" class="headerlink" title="Hard task (HT) meta-batch"></a>Hard task (HT) meta-batch</h3><p>通过测试得到分裂准确率最低的<strong>m</strong>类，在构建<strong>task</strong>时，通过对包含在<strong>m</strong>类中的样本重新采样组成<strong>hard task</strong>，继而组成<strong>hard task meta batch</strong>；有点感觉像<strong>遇强则强</strong>，哪里跌倒哪里爬起来，主动去学习错分任务；具体算法流程如下图：</p>
+<p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210926084653490.png" alt="MTL算法流程"></p>
+<p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210926084718271.png" alt="一个task的训练细节"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>本文引入了<strong>scaling</strong>和<strong>shifting</strong>参数，对权重参数进行调整；这样避免了对整个网络的权重参数进行更新，减轻了过拟合的问题；并且采用了更深的卷积神经网络<strong>resnet-12</strong>（之前是<strong>conv-4</strong>），提高了图片特征表示能力；最后采用<strong>HT</strong>训练策略，让网络<strong>由简到难</strong>进行训练，从而提高分类准确率；这篇论文的代码之前粗略跑过，当时没看懂论文；最近代码跑不了，可能后续跑了代码，会补一下相关的笔记。</p>
 
                 
             </div>
@@ -530,7 +526,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://linfzbin.github.io/2021/09/17/vue-jiao-shou-jia-pei-zhi-dai-li/">https://linfzbin.github.io/2021/09/17/vue-jiao-shou-jia-pei-zhi-dai-li/</a>
+                    <a href="https://linfzbin.github.io/2021/09/27/meta-transfer-learning-for-few-shot-learning-yue-du-bi-ji/">https://linfzbin.github.io/2021/09/27/meta-transfer-learning-for-few-shot-learning-yue-du-bi-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -568,16 +564,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Vue%E5%9F%BA%E7%A1%80/">
-                                    <span class="chip bg-color">Vue基础</span>
+                                <a href="/tags/%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">小样本学习</span>
                                 </a>
                             
-                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">笔记</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%A4%8D%E4%B9%A0/">
-                                    <span class="chip bg-color">复习</span>
+                                <a href="/tags/few-shot-learning/">
+                                    <span class="chip bg-color">few shot learning</span>
                                 </a>
                             
                         </div>
@@ -621,17 +613,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/09/17/vue-zu-jian-tong-xin-zi-chuan-fu/">
+                <a href="/2021/09/27/meta-transfer-learning-for-few-shot-learning-yue-du-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="vue-组件通信（子传父）">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Meta-Transfer Learning for Few-Shot Learning阅读笔记">
                         
-                        <span class="card-title">vue-组件通信（子传父）</span>
+                        <span class="card-title">Meta-Transfer Learning for Few-Shot Learning阅读笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -641,34 +634,31 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Vue/" class="post-category">
-                                    Vue
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    论文笔记
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Vue%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">Vue基础</span>
+                    <a href="/tags/%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">小样本学习</span>
                     </a>
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%A4%8D%E4%B9%A0/">
-                        <span class="chip bg-color">复习</span>
+                    <a href="/tags/few-shot-learning/">
+                        <span class="chip bg-color">few shot learning</span>
                     </a>
                     
                 </div>
@@ -682,13 +672,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/14/vue-zu-jian-bi-ji/">
+                <a href="/2021/09/23/prototype-completion-with-primitive-knowledge-for-few-shot-learning-yue-du-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="vue组件笔记">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Prototype Completion with Primitive Knowledge for Few-Shot Learning阅读笔记">
                         
-                        <span class="card-title">vue组件笔记</span>
+                        <span class="card-title">Prototype Completion with Primitive Knowledge for Few-Shot Learning阅读笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -699,14 +689,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Vue/" class="post-category">
-                                    Vue
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    论文笔记
                                 </a>
                             
                             
@@ -716,16 +706,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Vue%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">Vue基础</span>
+                    <a href="/tags/%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">小样本学习</span>
                     </a>
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%A4%8D%E4%B9%A0/">
-                        <span class="chip bg-color">复习</span>
+                    <a href="/tags/few-shot-learning/">
+                        <span class="chip bg-color">few shot learning</span>
                     </a>
                     
                 </div>
@@ -856,6 +842,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+    });
+</script>
 
 
 
