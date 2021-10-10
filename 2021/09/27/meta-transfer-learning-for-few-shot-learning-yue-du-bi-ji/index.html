@@ -426,14 +426,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-27
+                    2021-09-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    1.1k
                 </div>
                 
 
@@ -500,6 +500,7 @@ SS(X;W,b;\Phi_{S_{ \{1,2 \} } }) = (W \odot \Phi_{ S_1 }) + (b + \Phi_{S_2} )</s
 <p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210926084653490.png" alt="MTL算法流程"></p>
 <p><img src="https://gitee.com/lin2000h/images/raw/master/image-20210926084718271.png" alt="一个task的训练细节"></p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>本文引入了<strong>scaling</strong>和<strong>shifting</strong>参数，对权重参数进行调整；这样避免了对整个网络的权重参数进行更新，减轻了过拟合的问题；并且采用了更深的卷积神经网络<strong>resnet-12</strong>（之前是<strong>conv-4</strong>），提高了图片特征表示能力；最后采用<strong>HT</strong>训练策略，让网络<strong>由简到难</strong>进行训练，从而提高分类准确率；这篇论文的代码之前粗略跑过，当时没看懂论文；最近代码跑不了，可能后续跑了代码，会补一下相关的笔记。</p>
+<h3 id="代码调试"><a href="#代码调试" class="headerlink" title="代码调试"></a>代码调试</h3><p>预训练代码差不多跑了十二个小时，除了改每次梯度下降的次数100—10之外，以及设置了随机种子之外，其他参数都未进行修改</p>
 
                 
             </div>
@@ -613,18 +614,17 @@ SS(X;W,b;\Phi_{S_{ \{1,2 \} } }) = (W \odot \Phi_{ S_1 }) + (b + \Phi_{S_2} )</s
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/27/meta-transfer-learning-for-few-shot-learning-yue-du-bi-ji/">
+                <a href="/2021/10/10/vue-zu-jian-jian-tong-xin-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Meta-Transfer Learning for Few-Shot Learning阅读笔记">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="vue组件间通信总结">
                         
-                        <span class="card-title">Meta-Transfer Learning for Few-Shot Learning阅读笔记</span>
+                        <span class="card-title">vue组件间通信总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -634,31 +634,30 @@ SS(X;W,b;\Phi_{S_{ \{1,2 \} } }) = (W \odot \Phi_{ S_1 }) + (b + \Phi_{S_2} )</s
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-27
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-10
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    论文笔记
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Vanous
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">小样本学习</span>
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
                     </a>
                     
-                    <a href="/tags/few-shot-learning/">
-                        <span class="chip bg-color">few shot learning</span>
+                    <a href="/tags/%E5%A4%8D%E4%B9%A0/">
+                        <span class="chip bg-color">复习</span>
+                    </a>
+                    
+                    <a href="/tags/Vue%E9%AB%98%E7%BA%A7/">
+                        <span class="chip bg-color">Vue高级</span>
                     </a>
                     
                 </div>
